@@ -1,0 +1,25 @@
+<!-- <p>email-invitation-form works!</p> -->
+
+<nb-card>
+    <nb-card-header>Invite People to Join Project</nb-card-header>
+    <nb-card-body>
+      <form [formGroup]="emailInvitationForm" (ngSubmit)="onSubmit()">
+        
+        <!-- display notice -->
+        <div *ngIf="message" [ngClass]="{ 'alert': message, 'alert-success': message.type === 'success', 'alert-danger': message.type === 'error' }">{{message.text}}</div>
+        
+        <div class="form-group">
+          <label class="label">Name</label>
+          <input type="text" formControlName="recipientName" class="form-control" placeholder="Optional" nbInput fullWidth>
+          <label for="exampleInputEmail1" class="label">Email Address</label>
+          <input type="email" formControlName="recipientEmail" class="form-control" placeholder="Required" [ngClass]="{'is-valid':submitted && f.recipientEmail.errors}" nbInput fullWidth id="exampleInputEmail1">
+          <div *ngIf="submitted && f.recipientEmail.errors">
+              <div *ngIf="f.recipientEmail.errors.required">Email is required</div>
+              <div *ngIf="f.recipientEmail.errors.email">Invalid email</div>
+          </div>
+        </div>
+        <button [disabled]="loading" type="submit" nbButton status="danger">Send</button>
+      </form>
+    </nb-card-body>
+  </nb-card>
+
