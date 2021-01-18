@@ -1,17 +1,17 @@
 Relevent code:
 
-Backend:
-backend/src/Email/email_sender.py
-backend/src/api/__init__.py
-backend/src/auth/auth.py
+Backend: <br />
+backend/src/Email/email_sender.py <br />
+backend/src/api/ <br />
+backend/src/auth/ <br />
 
 
 
-Frontend:
-frontend-test/ngx-admin/src/app/services/email.service.ts
-frontend-test/ngx-admin/src/app/pages/forms/email-invitation-form
+Frontend: <br />
+frontend-test/ngx-admin/src/app/services/email.service.ts <br />
+frontend-test/ngx-admin/src/app/pages/forms/email-invitation-form 
 
 
-Notes: 
+Notes: <br />
 1 working on switching backend to firestore
 
